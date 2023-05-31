@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+     <br>
+    Pieniądze otrzymane od departamentu sprawiedliwości : <input type="number" id="pieniadzedooj">  <br>
+    Ilość godzin którą wyrobił departament w tygodniu : <input type="number" id="pgodzinydep"> <br>
+    Ilość godzin wyrobionych przez pracownika : <input type="number" id="godzinyziut"> <br> 
+    
+    <button onclick="oblicz();">Policz</button>
+    <p id="wynik"></p>
+</body>
+</html>
+<script>
+function oblicz(){
+    var doj = document.getElementById("pieniadzedooj").value;
+    var dep = document.getElementById("pgodzinydep").value;
+    var godzz1 = document.getElementById("godzinyziut").value;
+    var hejka = godzz1/dep;
+    var hejka2 = Math.round(hejka*doj);
+    var wynik = document.getElementById("wynik");
+    wynik.innerHTML = "Ziutek jeden powinien dostać tyle sosu: " + hejka2;
+
+
+}
+</script>
